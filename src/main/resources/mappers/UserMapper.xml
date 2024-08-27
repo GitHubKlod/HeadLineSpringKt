@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sp61.auto.mapper.UserMapper">
+
+    <select id="getUserById" resultType="com.example.sp61.bean.User">
+        select * from user where u_id = #{uId}
+    </select>
+
+    <insert id="addUser">
+        insert into user(u_name, u_age) values (#{uName}, #{uAge})
+    </insert>
+</mapper>
