@@ -23,9 +23,7 @@ class NewsHeadlineController {
 
     @GetMapping("getNewsHeadline")
     fun getNewsHeadline(page:Long=1,pageSize:Long=10,type:Int=0,key:String=""):PageResponseBean<NewsHeadlineBean>{
-        "ASDASDASDASD".logE()
         return  newsHeadlineSi.findByPage(page,pageSize,type,key)
-
     }
 
     @GetMapping("getNewsHeadlineDetail")
